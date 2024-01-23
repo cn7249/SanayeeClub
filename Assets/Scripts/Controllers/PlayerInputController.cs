@@ -6,8 +6,9 @@ using UnityEngine.InputSystem;
 public class PlayerInputController : GameCharacterController
 {
     private Camera _camera;
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         _camera = Camera.main;
     }
 

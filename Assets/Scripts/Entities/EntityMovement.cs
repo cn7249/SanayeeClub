@@ -5,6 +5,7 @@ using UnityEngine;
 public class EntityMovement : MonoBehaviour
 {
     private GameCharacterController _controller;
+    private CharacterStatsHandler _stats;
 
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
@@ -13,6 +14,7 @@ public class EntityMovement : MonoBehaviour
     {
         _controller = GetComponent<GameCharacterController>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        _stats = GetComponent<CharacterStatsHandler>();
     }
 
     private void Start()
@@ -32,7 +34,7 @@ public class EntityMovement : MonoBehaviour
 
     private void ApplyMovment(Vector2 direction)
     {
-        direction = direction * 5;
+        direction = direction * _stats.CurrentStates.speed;
 
         _rigidbody.velocity = direction;
     }
