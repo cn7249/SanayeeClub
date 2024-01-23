@@ -12,4 +12,5 @@ public class GameAnimations : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         controller = GetComponent<GameCharacterController>();
     }
+
 }

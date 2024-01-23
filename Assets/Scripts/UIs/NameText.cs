@@ -12,7 +12,6 @@ public class NameText : MonoBehaviour
 
     private void Awake()
     {
-        // 부모 오브젝트의 컴포넌트를 가져온다
         _stats = GetComponentInParent<CharacterStatsHandler>();
         _text = GetComponent<Text>();
     }

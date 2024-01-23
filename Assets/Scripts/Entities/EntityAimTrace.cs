@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EntityAimTrace : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer characterRenderer;
+    public SpriteRenderer characterRenderer;
 
     private GameCharacterController _controller;
 
