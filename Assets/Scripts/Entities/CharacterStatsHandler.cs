@@ -24,6 +24,12 @@ public class CharacterStatsHandler : MonoBehaviour
         CurrentStates.maxHealth = baseStats.maxHealth;
         CurrentStates.speed = baseStats.speed;
 
+        CheckNameIsNull();
+
+    }
+
+    private void CheckNameIsNull()
+    {
         if (GameManager.I.PlayerName != null)
         {
             CurrentStates.name = GameManager.I.PlayerName;

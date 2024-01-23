@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class EnterButton : MonoBehaviour
 {
-    public GameObject SceneVar;
-
     private Text _input;
 
     private void Awake()
@@ -19,7 +17,6 @@ public class EnterButton : MonoBehaviour
     {
         string name = _input.text;
         GameManager.I.PlayerName = name;
-        Debug.Log(GameManager.I.PlayerName);
 
         if (name.Length > 2 && name.Length < 10)
         {
